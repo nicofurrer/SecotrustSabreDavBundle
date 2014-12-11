@@ -40,6 +40,7 @@ class Configuration implements ConfigurationInterface
                         ->booleanNode('auth')->defaultFalse()->end()
                         ->booleanNode('browser')->defaultFalse()->end()
                         ->booleanNode('caldav')->defaultFalse()->end()
+                        ->booleanNode('carddav')->defaultFalse()->end()
                         ->booleanNode('lock')->defaultTrue()->end()
                         ->booleanNode('temp')->defaultTrue()->end()
                         ->booleanNode('mount')->defaultFalse()->end()

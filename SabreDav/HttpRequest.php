@@ -32,7 +32,8 @@ class HttpRequest extends BaseRequest
     public function __construct(Request $request)
     {
         parent::__construct($request->server->all(), $request->request->all());
-        $this->setBody($request->getContent(true), true);
+        $this->setBody(fopen('php://input', 'rb'), true);
+        //$this->setBody($request->getContent(true), true);
         $this->request = $request; // TODO needed?
     }
 }

@@ -23,7 +23,7 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.2",
-        "sabre/dav": "1.8.*"
+        "sabre/dav": "2.1.2"
     },
     "suggest": {
         "sabre/vobject": "~3.0.0",

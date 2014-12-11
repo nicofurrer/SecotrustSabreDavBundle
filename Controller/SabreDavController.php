@@ -52,13 +52,17 @@ class SabreDavController
      */
     public function execAction(Request $request)
     {
+
         $dav = $this->dav;
+        $callback = function() {};
         $callback = function () use ($dav) {
             $dav->exec();
         };
         $response = new StreamedResponse($callback);
         $dav->httpRequest = new HttpRequest($request);
         $dav->httpResponse = new HttpResponse($response);
+
+        $response->setStatusCode(207);
 
         return $response;
     }
